@@ -12,6 +12,12 @@
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
+% Code configuration
+\usepackage{minted}
+\setminted[python]{xleftmargin=.5cm}
+\usemintedstyle{tango}
+\renewcommand{\theFancyVerbLine}{\ttfamily\scriptsize{\arabic{FancyVerbLine}}} 
+
 \title{Metropolis}
 \subtitle{A modern beamer theme}
 \date{\today}
@@ -325,6 +331,26 @@ or show \textbf{bold} results.\end{verbatim}
   \themename will automatically turn off slide numbering and progress bars for
   slides in the appendix.
 \end{frame}
+\begin{frame}[fragile]{Minted test}
+	\begin{minted}[
+		frame=lines,
+		framesep=2mm,
+		bgcolor=lightgray!10,
+		fontsize=\footnotesize,
+		numbersep=6pt,
+		linenos
+		]{c}
+int fib(int n){
+  if (n < 2)
+    return n;
+  else
+	return fib(n-1) + fib(n-2);
+}
+// Print Fibonacci value
+printf("%d\n", fib(10));
+\end{minted}
+\end{frame} 
+
 
 \begin{frame}[allowframebreaks]{References}
 
