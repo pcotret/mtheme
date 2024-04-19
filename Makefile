@@ -7,3 +7,4 @@ all:
 
 clean:
 	rm *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc *.vrb $(MAIN).pdf
+	rm -rf _minted-main
